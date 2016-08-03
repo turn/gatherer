@@ -13,11 +13,13 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
+
 package com.turn.gatherer;
 
 import java.io.Serializable;
 import java.util.concurrent.ThreadLocalRandom;
 
+@SuppressWarnings("WeakerAccess")
 public class RequestID implements Serializable {
 	private static final long serialVersionUID = 1L;
 

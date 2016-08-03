@@ -13,6 +13,7 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
+
 package com.turn.gatherer;
 
 import io.netty.util.HashedWheelTimer;
@@ -21,8 +22,13 @@ import io.netty.util.Timeout;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicReference;
 
+/**
+ * A {@link Gatherer} that uses Netty's {@link HashedWheelTimer} to process timeouts.
+ *
+ * @param <T> type of each request part
+ */
+@SuppressWarnings("WeakerAccess")
 public class HashedWheelGatherer<T> implements Gatherer<T> {
 
 	protected RequestHandler<T> handler;

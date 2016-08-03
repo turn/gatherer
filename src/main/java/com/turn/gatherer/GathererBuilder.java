@@ -18,6 +18,12 @@ package com.turn.gatherer;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Builds a {@link Gatherer}.
+ *
+ * @param <T> type of each request part
+ */
+@SuppressWarnings("WeakerAccess")
 public class GathererBuilder<T> {
 	private RequestHandler<T> handler;
 	private int numParts;

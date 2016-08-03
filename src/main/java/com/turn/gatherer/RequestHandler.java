@@ -16,6 +16,12 @@
 
 package com.turn.gatherer;
 
+/**
+ * Callback type that handles a request after all parts are received or a timeout expires.
+ *
+ * @param <T> type of each request part
+ */
+@SuppressWarnings("WeakerAccess")
 public interface RequestHandler<T> {
 	void handle(RequestBuffer<T> buffer);
 }

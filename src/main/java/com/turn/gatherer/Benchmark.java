@@ -19,6 +19,11 @@ package com.turn.gatherer;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * A simple benchmark class.
+ *
+ * @author alugowski
+ */
 public class Benchmark {
 	public static void main(String[] argv) {
 		int NUM_REQUESTS = 100;
@@ -42,7 +47,7 @@ public class Benchmark {
 			gatherer.receive(id, 0, System.nanoTime());
 			try {
 				Thread.sleep(0, 1);
-			} catch (InterruptedException e) {
+			} catch (InterruptedException ignored) {
 			}
 		}
 

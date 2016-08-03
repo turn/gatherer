@@ -16,6 +16,15 @@
 
 package com.turn.gatherer;
 
+/**
+ * Gatherer collects pieces of a request. If all pieces are received (or a timeout expires) then the request is
+ * processed.
+ *
+ * Construct using {@link GathererBuilder}.
+ *
+ * @param <T> type of each request part
+ */
+@SuppressWarnings("WeakerAccess")
 public interface Gatherer<T> {
 	void receive(RequestID id, int part, T data);
 }
