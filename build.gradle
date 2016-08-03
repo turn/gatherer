@@ -18,3 +18,8 @@ dependencies {
 test {
     useTestNG()
 }
+
+// add sources to main jar
+jar {
+    from sourceSets.main.allSource
+}
