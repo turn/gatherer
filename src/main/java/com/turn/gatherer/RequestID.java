@@ -19,14 +19,25 @@ package com.turn.gatherer;
 import java.io.Serializable;
 import java.util.concurrent.ThreadLocalRandom;
 
-@SuppressWarnings("WeakerAccess")
+/**
+ * An identifier for requests. Convertible to/from a long, but kept as a separate class to for clearer semantics.
+ */
+@SuppressWarnings({"WeakerAccess", "unused"})
 public class RequestID implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	protected long id;
+	private final long id;
 
 	public RequestID() {
 		id = System.nanoTime() ^ ThreadLocalRandom.current().nextLong();
+	}
+
+	public RequestID(long id) {
+		this.id = id;
+	}
+
+	public long asLong() {
+		return id;
 	}
 
 	@Override
