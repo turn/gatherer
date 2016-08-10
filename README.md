@@ -34,10 +34,10 @@ Use the `GathererBuilder` to create a `Gatherer`:
 
 	Gatherer<Long> gatherer = new GathererBuilder<Long>()
 			.handler(buffer -> {
-				if (buffer.get(0) != null) {
+				if (buffer.get(A_PART) != null) {
 					System.out.println("Got A! " + buffer.get(A_PART).longValue());
 				}
-				if (buffer.get(0) != null) {
+				if (buffer.get(B_PART) != null) {
 					System.out.println("Got B! " + buffer.get(B_PART).longValue());
 				}
 			})
